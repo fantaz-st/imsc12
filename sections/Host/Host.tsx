@@ -6,11 +6,11 @@ import styles from "./Host.module.css";
 
 export default function Host() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="venue">
       <Container className={styles.inner}>
         <div className={styles.text}>
           <SectionHeader
-            tag="Host"
+            tag="Venue"
             title={<>Meet the Hosts Behind <span className="muted">IMSC 2027</span></>}
           />
           <SplitText as="p" className={styles.big}>

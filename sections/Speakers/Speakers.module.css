@@ -21,6 +21,10 @@
   border-radius: var(--radius-small);
 }
 
+.portrait img {
+  object-fit: cover;
+}
+
 .portrait > div {
   display: grid;
   place-items: center;
@@ -47,24 +51,6 @@
 
 .info p {
   color: var(--muted);
-}
-
-.link {
-  display: grid;
-  width: var(--space-10);
-  height: var(--space-10);
-  flex: none;
-  place-items: center;
-  border-radius: var(--radius-pill);
-  background: var(--surface-raised);
-  font-size: var(--type-small);
-  font-weight: var(--weight-semibold);
-  transition: background 300ms;
-}
-
-.link:hover {
-  color: var(--white);
-  background: var(--accent);
 }
 
 @media (max-width: 1100px) {

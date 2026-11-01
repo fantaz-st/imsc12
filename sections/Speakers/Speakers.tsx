@@ -1,39 +1,70 @@
 import Container from "@/components/Container/Container";
 import RevealImage from "@/components/RevealImage/RevealImage";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
-import { speakers } from "@/data/content";
+import {
+  commercialTechnicalPresentations,
+  keynoteSpeakers,
+  type Speaker,
+} from "@/data/content";
 import styles from "./Speakers.module.css";
 
-export default function Speakers() {
+function SpeakerSection({
+  id,
+  tag,
+  title,
+  lead,
+  speakers,
+}: {
+  id: string;
+  tag: string;
+  title: string;
+  lead: string;
+  speakers: Speaker[];
+}) {
   return (
-    <section className={styles.section} id="speakers">
+    <section className={styles.section} id={id}>
       <Container>
-        <SectionHeader
-          tag="Speakers"
-          align="split"
-          title={<>Meet the Voices Shaping <span className="muted">Maritime Futures</span></>}
-          lead="Learn from researchers and practitioners who are redefining navigation, ship design and sustainable ports."
-        />
+        <SectionHeader tag={tag} align="split" title={title} lead={lead} />
         <div className={styles.grid}>
           {speakers.map((speaker) => (
             <article className={styles.speaker} data-card key={speaker.name}>
               <RevealImage
-                alt={`${speaker.name} speaker portrait`}
-                placeholder={`ph${speaker.tone.toUpperCase()}`}
-                initials={speaker.initials}
+                src={speaker.image}
+                alt={`${speaker.name} portrait`}
                 className={styles.portrait}
               />
               <div className={styles.info}>
-                <div>
-                  <h3>{speaker.name}</h3>
-                  <p>{speaker.role}</p>
-                </div>
-                <a className={styles.link} href="#" aria-label={`${speaker.name} on LinkedIn`}>in</a>
+                <h3>{speaker.name}</h3>
+                <p>{speaker.role}</p>
               </div>
             </article>
           ))}
         </div>
       </Container>
     </section>
+  );
+}
+
+export function KeynoteSpeakers() {
+  return (
+    <SpeakerSection
+      id="speakers"
+      tag="Speakers"
+      title="Keynote Speakers"
+      lead="Meet the keynote voices shaping maritime futures."
+      speakers={keynoteSpeakers}
+    />
+  );
+}
+
+export function CommercialTechnicalPresentations() {
+  return (
+    <SpeakerSection
+      id="commercial-presentations"
+      tag="Presentations"
+      title="Commercial-technical presentations"
+      lead="Discover practical perspectives from maritime industry professionals."
+      speakers={commercialTechnicalPresentations}
+    />
   );
 }

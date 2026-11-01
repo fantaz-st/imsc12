@@ -1,8 +1,7 @@
 export type Speaker = {
   name: string;
   role: string;
-  initials: string;
-  tone: string;
+  image: string;
 };
 
 export type ProgrammeEntry = {
@@ -50,13 +49,15 @@ export type GalleryItem = {
   size: string;
 };
 
-export const speakers: Speaker[] = [
-  { name: "Prof. Ana Kovač", role: "Marine Engineering, University of Split", initials: "AK", tone: "a" },
-  { name: "Dr. Marco Bianchi", role: "Autonomous Vessels Lab, Genoa", initials: "MB", tone: "b" },
-  { name: "Capt. Jonas Reiter", role: "Head of Fleet Safety, Nordic Lines", initials: "JR", tone: "c" },
-  { name: "Dr. Lena Morris", role: "Maritime Law & Policy, Southampton", initials: "LM", tone: "d" },
-  { name: "Prof. Ivo Perić", role: "Port Logistics, University of Rijeka", initials: "IP", tone: "e" },
-  { name: "Dr. Sofia Tanaka", role: "Green Shipping Research, Kobe", initials: "ST", tone: "f" },
+export const keynoteSpeakers: Speaker[] = [
+  { name: "Lukša Čičovački", role: "Head of Unit for Maritime Digital Solutions, EMSA", image: "/images/speakers/luksa-cicovacki.png" },
+  { name: "Dong-Wook Song", role: "World Maritime University", image: "/images/speakers/dong-wook-song.png" },
+  { name: "Tatjana Krilić", role: "International Maritime Organization (IMO)", image: "/images/speakers/tatjana-krilic.png" },
+];
+
+export const commercialTechnicalPresentations: Speaker[] = [
+  { name: "Josip Rukavina", role: "Vectrino", image: "/images/speakers/josip-rukavina.png" },
+  { name: "Nenad Radović", role: "MEP", image: "/images/speakers/nenad-radovic.png" },
 ];
 
 export const programme: ProgrammeDay[] = [

@@ -10,9 +10,9 @@ export default function Programme() {
     <section className={styles.section} id="schedule">
       <Container>
         <SectionHeader
-          tag="Programme"
+          tag="Program"
           align="row"
-          title={<>Fuel Your Curiosity — <span className="muted">Discover the Programme</span></>}
+          title={<>Conference <span className="muted">Program</span></>}
           action={<Button href="#tickets">Register now</Button>}
         />
         {programme.map((day) => (

@@ -7,8 +7,11 @@ import styles from "./Nav.module.css";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#speakers", label: "Speakers" },
-  { href: "#schedule", label: "Programme" },
+  { href: "#schedule", label: "Conference Program" },
+  { href: "#speakers", label: "Keynote Speakers" },
+  { href: "#commercial-presentations", label: "Commercial-technical presentations" },
+  { href: "#committee", label: "Committees" },
+  { href: "#venue", label: "Venue" },
   { href: "#tickets", label: "Registration" },
   { href: "#faq", label: "FAQ" },
 ];

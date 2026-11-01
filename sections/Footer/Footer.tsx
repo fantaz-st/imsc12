@@ -4,9 +4,11 @@ import Container from "@/components/Container/Container";
 import styles from "./Footer.module.css";
 
 const conferenceLinks = [
-  { href: "#speakers", text: "Speakers" },
-  { href: "#schedule", text: "Programme" },
-  { href: "#", text: "Venue" },
+  { href: "#schedule", text: "Conference Program" },
+  { href: "#speakers", text: "Keynote Speakers" },
+  { href: "#commercial-presentations", text: "Commercial-technical presentations" },
+  { href: "#committee", text: "Committees" },
+  { href: "#venue", text: "Venue" },
   { href: "#tickets", text: "Registration" },
 ];
 
