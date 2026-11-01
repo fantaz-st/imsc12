@@ -1,0 +1,7 @@
+.tag {
+  display: inline-block;
+  margin-bottom: var(--space-5);
+  color: var(--soft);
+  font-size: var(--type-label);
+  letter-spacing: var(--tracking-label);
+}

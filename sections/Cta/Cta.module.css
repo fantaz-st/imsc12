@@ -1,0 +1,101 @@
+.cta {
+  position: relative;
+  display: grid;
+  min-height: var(--size-cta-height);
+  margin: var(--size-section-margin) 0;
+  place-items: center;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--white);
+}
+
+.dotField {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 260px at var(--spotlight-x, -1000px) var(--spotlight-y, -1000px), transparent 0%, rgba(5, 5, 5, 0.65) 72%, rgba(5, 5, 5, 0.88) 100%),
+    radial-gradient(circle at var(--spotlight-x, -1000px) var(--spotlight-y, -1000px), rgba(107, 77, 255, 0.14), transparent 220px),
+    radial-gradient(circle, rgba(107, 77, 255, 0.55) 1.6px, transparent 2.3px);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: auto, auto, 32px 32px;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  max-width: var(--space-240);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding: 0 var(--container-gutter);
+}
+
+.left h2 {
+  font-size: var(--type-h2);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-tight);
+}
+
+.left h2 :global(.muted) {
+  color: var(--muted);
+}
+
+.left p {
+  margin: var(--space-3) 0 var(--space-7);
+  color: var(--size-cta-muted);
+  font-size: var(--type-body-large);
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: var(--space-3);
+}
+
+.countdown > div {
+  min-width: var(--size-countdown);
+  padding: var(--space-5);
+  border: var(--border-thin) solid var(--size-white-border);
+  border-radius: var(--radius-medium);
+  background: var(--overlay-dark-glass);
+  text-align: center;
+  backdrop-filter: blur(var(--space-3));
+}
+
+.countdown strong {
+  display: block;
+  font-size: var(--type-display);
+  font-size: var(--size-countdown-number);
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  letter-spacing: var(--tracking-countdown);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown span {
+  color: var(--overlay-white-low);
+  font-size: var(--size-countdown-label);
+}
+
+@media (max-width: 1100px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .countdown {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .countdown > div { min-width: 0; }
+  .countdown strong { font-size: var(--size-countdown-number-small); }
+}

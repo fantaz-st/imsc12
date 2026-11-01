@@ -1,0 +1,116 @@
+.nav {
+  position: fixed;
+  z-index: 50;
+  top: var(--space-5);
+  left: 50%;
+  width: var(--size-nav-width);
+  transform: translateX(-50%);
+}
+
+.pill {
+  display: flex;
+  height: var(--nav-height);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-2) 0 var(--space-5);
+  border: var(--border-thin) solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--overlay-light);
+  backdrop-filter: blur(var(--size-nav-blur));
+}
+
+.logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo img {
+  width: var(--space-20);
+  height: auto;
+  opacity: 0;
+}
+
+.logo::after {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(var(--accent), #fff 40%, var(--accent));
+  content: "";
+  mask: url("/assets/logo.svg") center / contain no-repeat;
+  -webkit-mask: url("/assets/logo.svg") center / contain no-repeat;
+}
+
+.menu {
+  display: inline-flex;
+  height: var(--space-11);
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--overlay-black-soft);
+  font-size: var(--type-body);
+}
+
+.burger {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.burger i {
+  display: block;
+  width: var(--space-4);
+  height: var(--size-one-pixel);
+  background: #fff;
+  transition: transform 350ms var(--ease-out);
+}
+
+.open .burger i:first-child {
+  transform: translateY(var(--size-three-pixel)) rotate(45deg);
+}
+
+.open .burger i:last-child {
+  transform: translateY(calc(var(--size-three-pixel) * -1)) rotate(-45deg);
+}
+
+.panel {
+  display: grid;
+  visibility: hidden;
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  transform: translateY(calc(var(--space-2) * -1));
+  border: var(--border-thin) solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--overlay-white);
+  opacity: 0;
+  backdrop-filter: blur(var(--size-nav-blur));
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), visibility 300ms;
+}
+
+.open .panel {
+  visibility: visible;
+  transform: none;
+  opacity: 1;
+}
+
+.panel a {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-small);
+  font-size: var(--type-h3);
+  letter-spacing: var(--tracking-section);
+}
+
+.panel a:hover {
+  background: var(--overlay-black-faint);
+}
+
+@media (max-width: 760px) {
+  .nav {
+    width: calc(100% - var(--space-8));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .burger i,
+    .panel { transition: none; }
+  }
+}

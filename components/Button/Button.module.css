@@ -1,0 +1,65 @@
+.button {
+  display: inline-flex;
+  min-height: var(--button-height);
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-pill);
+  font-size: var(--type-body);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+  transition: background 300ms var(--ease-out), transform 300ms var(--ease-out), color 300ms;
+}
+
+.primary {
+  color: var(--white);
+  background: var(--accent);
+}
+
+.primary:hover {
+  background: var(--accent-hover);
+}
+
+.light {
+  color: var(--black);
+  background: var(--white);
+}
+
+.light:hover {
+  background: var(--size-button-light-hover);
+}
+
+.block {
+  width: 100%;
+}
+
+.iconButton {
+  gap: var(--space-3);
+  min-height: calc(var(--icon-size) + var(--space-1));
+  padding: var(--space-1) var(--space-6) var(--space-1) var(--space-1);
+}
+
+.icon {
+  display: grid;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex: none;
+  place-items: center;
+  border-radius: var(--radius-pill);
+  color: var(--black);
+  background: var(--white);
+  transition: transform 400ms var(--ease-out);
+}
+
+.icon svg {
+  width: var(--space-6);
+  height: var(--space-6);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.iconButton:hover .icon {
+  transform: rotate(45deg);
+}

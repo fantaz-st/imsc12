@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: var(--space-170);
+  height: max(100vh, var(--space-190));
+  max-height: var(--space-300);
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: var(--size-image-hero-shift) 0 0;
+  height: 112%;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center 44%;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.25) 0%, rgba(5, 5, 5, 0.1) 40%, rgba(5, 5, 5, 0.92) 100%);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding-bottom: var(--space-20);
+}
+
+.meta {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--size-hero-foreground);
+  font-size: var(--size-type-hero-meta);
+}
+
+.metaIcon {
+  display: grid;
+  width: var(--size-meta-icon);
+  height: var(--size-meta-icon);
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--overlay-hero-meta);
+  backdrop-filter: blur(var(--space-2));
+}
+
+.metaIcon svg {
+  width: var(--space-5);
+  height: var(--space-5);
+  fill: none;
+  stroke: #fff;
+  stroke-width: var(--size-feature-line);
+}
+
+.title {
+  margin-bottom: var(--space-5);
+  font-size: var(--type-display);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--size-h1-tight);
+}
+
+.lead {
+  max-width: var(--space-140);
+  color: var(--size-hero-copy);
+  font-size: var(--type-body-large);
+  line-height: var(--leading-copy);
+}
+
+.side {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-5);
+}
+
+.proof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--soft);
+  font-size: var(--size-proof);
+}
+
+.proof strong {
+  color: var(--text);
+  font-weight: var(--weight-medium);
+}
+
+.faces {
+  display: flex;
+}
+
+.faces > span + span {
+  margin-left: calc(var(--space-3) * -1);
+}
+
+.more {
+  background: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: var(--space-12);
+  }
+
+  .lead {
+    font-size: var(--type-body-large);
+  }
+
+  .hero {
+    min-height: var(--space-170);
+  }
+}

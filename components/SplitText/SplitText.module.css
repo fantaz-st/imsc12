@@ -1,0 +1,12 @@
+.word {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: var(--split-padding);
+  margin-bottom: calc(var(--split-padding) * -1);
+  vertical-align: top;
+}
+
+.wordInner {
+  display: inline-block;
+  will-change: transform;
+}

@@ -1,0 +1,55 @@
+.section {
+  overflow: hidden;
+  padding: var(--section-padding) 0;
+  mask-image: linear-gradient(90deg, transparent, var(--black) 12%, var(--black) 88%, transparent);
+}
+
+.track {
+  gap: var(--grid-gap);
+}
+
+.quote {
+  display: flex;
+  width: var(--size-quote-default);
+  min-height: var(--size-quote-height);
+  flex: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding: var(--size-quote-padding);
+  border: var(--border-thin) solid var(--line);
+  border-radius: var(--radius-large);
+  background: var(--surface);
+}
+
+.quote > p {
+  font-size: var(--size-testimonial);
+  line-height: var(--size-body-line);
+  letter-spacing: var(--size-body-tight);
+}
+
+.by {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.by strong {
+  display: block;
+  font-weight: var(--weight-medium);
+}
+
+.by small {
+  color: var(--muted);
+  font-size: var(--type-small);
+}
+
+.face {
+  width: var(--space-11);
+  height: var(--space-11);
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .quote { width: var(--size-quote-mobile); }
+}

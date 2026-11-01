@@ -1,0 +1,19 @@
+.avatar {
+  display: grid;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  flex: none;
+  place-items: center;
+  border: var(--size-two-pixel) solid var(--size-avatar-border);
+  border-radius: var(--radius-pill);
+  color: var(--overlay-avatar);
+  font-size: var(--type-small);
+  font-weight: var(--weight-semibold);
+}
+
+.toneA { background: linear-gradient(140deg, var(--avatar-a-start), var(--avatar-a-end)); }
+.toneB { background: linear-gradient(140deg, var(--avatar-b-start), var(--avatar-b-end)); }
+.toneC { background: linear-gradient(140deg, var(--avatar-c-start), var(--avatar-c-end)); }
+.toneD { background: linear-gradient(140deg, var(--avatar-d-start), var(--avatar-d-end)); }
+.toneE { background: linear-gradient(140deg, var(--avatar-e-start), var(--avatar-e-end)); }
+.toneF { background: linear-gradient(140deg, var(--avatar-f-start), var(--avatar-f-end)); }

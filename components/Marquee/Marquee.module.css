@@ -1,0 +1,6 @@
+.marquee {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: var(--grid-gap);
+}
