@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className={styles.hero} data-hero>
       <div className={styles.background} data-hero-bg>
-        <Image src="/img/split.jpg" alt="" fill priority sizes="100vw" className={styles.backgroundImage} />
+        <Image src="/images/hero.jpg" alt="" fill priority sizes="100vw" className={styles.backgroundImage} />
       </div>
       <div className={styles.shade} />
       <Container className={styles.inner}>
