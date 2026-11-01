@@ -95,8 +95,6 @@ export default function AnimationRoot({
       });
 
       gsap.utils.toArray<HTMLElement>("[data-marquee]").forEach((track) => {
-        const direction = Number(track.dataset.direction ?? "1");
-        const duration = Number(track.dataset.duration ?? "50");
         const galleryTrack = track.matches("[data-gallery-track]");
         if (galleryTrack) {
           const galleryFrame = track.parentElement;
@@ -124,34 +122,7 @@ export default function AnimationRoot({
               },
             },
           );
-          return;
         }
-
-        const tween = gsap.fromTo(
-          track,
-          { xPercent: direction > 0 ? 0 : -50 },
-          {
-            xPercent: direction > 0 ? -50 : 0,
-            duration,
-            ease: "none",
-            repeat: -1,
-          },
-        );
-
-        ScrollTrigger.create({
-          trigger: track,
-          start: "top bottom",
-          end: "bottom top",
-          onUpdate: (self) => {
-            if (contextSafe) {
-              contextSafe(() => {
-                const velocity = Math.min(Math.abs(self.getVelocity()) / 400, 4);
-                gsap.to(tween, { timeScale: 1 + velocity, duration: 0.2, overwrite: true });
-                gsap.to(tween, { timeScale: 1, duration: 1, delay: 0.2 });
-              })();
-            }
-          },
-        });
       });
 
       gsap.from("[data-footer-word] span", {
@@ -164,7 +135,12 @@ export default function AnimationRoot({
 
       const refresh = () => ScrollTrigger.refresh();
       window.addEventListener("load", refresh);
-      return () => window.removeEventListener("load", refresh);
+      root.current?.setAttribute("data-animation-ready", "");
+
+      return () => {
+        window.removeEventListener("load", refresh);
+        root.current?.removeAttribute("data-animation-ready");
+      };
     },
     { scope: root },
   );

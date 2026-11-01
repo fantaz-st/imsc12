@@ -16,6 +16,7 @@
   border: var(--border-thin) solid var(--line);
   border-radius: var(--radius-medium);
   background: var(--surface);
+  cursor: pointer;
 }
 
 .question {

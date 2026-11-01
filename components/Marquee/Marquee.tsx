@@ -21,22 +21,33 @@ export default function Marquee({
   const loopRef = useRef<ReturnType<typeof horizontalLoop> | null>(null);
 
   useEffect(() => {
-    if (!galleryTrack || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const cards = containerRef.current?.querySelectorAll<HTMLElement>("[data-gallery-image]");
-    if (!cards?.length || loopRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
-    loopRef.current = horizontalLoop(cards, {
+    const items = galleryTrack
+      ? container.querySelectorAll<HTMLElement>("[data-gallery-image]")
+      : Array.from(container.children).filter(
+          (item): item is HTMLElement => item instanceof HTMLElement,
+        );
+    if (items.length < 2) return;
+
+    const speed = galleryTrack
+      ? 2
+      : container.scrollWidth / 2 / duration / 100;
+    loopRef.current = horizontalLoop(items, {
       repeat: -1,
-      speed: 2,
+      speed,
       paddingRight: 64,
+      reversed: direction < 0,
     });
 
     return () => {
       loopRef.current?.kill();
       loopRef.current = null;
     };
-  }, [galleryTrack]);
+  }, [direction, duration, galleryTrack]);
 
   return (
     <div

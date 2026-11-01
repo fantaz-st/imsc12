@@ -63,17 +63,21 @@ export default function Faq() {
           {faq.map(({ question, answer }, index) => {
             const isOpen = openIndex === index;
             return (
-              <article className={styles.item} data-row key={question}>
+              <article
+                className={styles.item}
+                data-row
+                key={question}
+                onClick={(event) => {
+                  const panel = event.currentTarget.querySelector<HTMLDivElement>(`#faq-answer-${index}`);
+                  if (panel) {
+                    contextSafe(() => toggle(index, panel))();
+                  }
+                }}
+              >
                 <button
                   className={styles.question}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
-                  onClick={(event) => {
-                    const panel = event.currentTarget.nextElementSibling;
-                    if (panel instanceof HTMLDivElement) {
-                      contextSafe(() => toggle(index, panel))();
-                    }
-                  }}
                 >
                   {question}<span className={styles.plus} aria-hidden="true" />
                 </button>

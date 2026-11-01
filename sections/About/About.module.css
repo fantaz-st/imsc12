@@ -12,7 +12,7 @@
   position: relative;
   width: 100%;
   max-width: var(--container-width);
-  height: 26rem;
+  height: 29rem;
   margin: var(--space-10) auto 0;
   padding: 0 var(--container-gutter);
 }
@@ -24,41 +24,41 @@
 .imageMain {
   top: 0;
   left: 50%;
-  width: min(41rem, 44vw);
-  height: 20.5rem;
+  width: min(46rem, 50vw);
+  height: 23rem;
   transform: translateX(-50%);
 }
 
 .imageA {
   top: -14rem;
   left: 3%;
-  width: 8.5rem;
-  height: 10rem;
+  width: 12rem;
+  height: 14rem;
 }
 
 .imageB {
-  top: -13.5rem;
+  top: -14rem;
   right: 3%;
-  width: 7rem;
-  height: 8rem;
+  width: 10rem;
+  height: 11rem;
 }
 
 .imageC {
-  top: 18rem;
+  top: 19rem;
   left: 4%;
-  width: 7rem;
-  height: 5.5rem;
+  width: 10rem;
+  height: 8rem;
 }
 
 .imageD {
-  top: 16rem;
+  top: 17rem;
   right: 3%;
-  width: 6rem;
-  height: 9rem;
+  width: 8.5rem;
+  height: 12rem;
 }
 
 @media (max-width: 1100px) and (min-width: 761px) {
-  .imageMain { width: 55vw; }
+  .imageMain { width: 60vw; height: 22rem; }
   .imageA { left: 2%; }
   .imageB { right: 2%; }
   .imageC { left: 2%; }
@@ -68,8 +68,8 @@
 @media (max-width: 760px) {
   .images { height: 17rem; margin-top: var(--space-8); }
   .imageMain { top: 0; width: 84%; height: 13rem; }
-  .imageA { top: -2.5rem; left: 2%; width: 4.5rem; height: 5rem; }
-  .imageB { top: -2rem; right: 2%; width: 4rem; height: 4.5rem; }
-  .imageC { top: 11rem; left: 4%; width: 4.5rem; height: 3.5rem; }
-  .imageD { top: 10rem; right: 4%; width: 4rem; height: 6rem; }
+  .imageA { top: -2.5rem; left: 2%; width: 5.5rem; height: 6rem; }
+  .imageB { top: -2rem; right: 2%; width: 5rem; height: 5.5rem; }
+  .imageC { top: 11rem; left: 4%; width: 5.5rem; height: 4.25rem; }
+  .imageD { top: 10rem; right: 4%; width: 5rem; height: 7.5rem; }
 }
