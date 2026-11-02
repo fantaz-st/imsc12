@@ -30,6 +30,8 @@ export default function AnimationRoot({
         .from(heroLead, { yPercent: 110, duration: 1.1, stagger: 0.015 }, 0.85)
         .fromTo("[data-hero-side]", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, 1.05);
 
+      document.documentElement.dataset.heroIntroReady = "true";
+
       gsap.to("[data-hero-bg] img", {
         yPercent: 12,
         ease: "none",
@@ -139,6 +141,8 @@ export default function AnimationRoot({
 
       return () => {
         window.removeEventListener("load", refresh);
+        delete document.documentElement.dataset.heroIntro;
+        delete document.documentElement.dataset.heroIntroReady;
         root.current?.removeAttribute("data-animation-ready");
       };
     },

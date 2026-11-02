@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import "./globals.css";
@@ -35,9 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={bulletinSans.variable}>
+    <html lang="en" className={bulletinSans.variable} suppressHydrationWarning>
       <body>
         <SmoothScroll>{children}</SmoothScroll>
+        <Script id="hero-intro-init" strategy="beforeInteractive">
+          {`if (location.pathname === "/" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            document.documentElement.dataset.heroIntro = "pending";
+          }`}
+        </Script>
       </body>
     </html>
   );
