@@ -1,4 +1,5 @@
 import AnimationRoot from "@/components/AnimationRoot";
+import HomeSectionNav from "@/components/HomeSectionNav/HomeSectionNav";
 import Nav from "@/sections/Nav/Nav";
 import Hero from "@/sections/Hero/Hero";
 import Ticker from "@/sections/Ticker/Ticker";
@@ -21,7 +22,8 @@ export default function Home() {
   return (
     <AnimationRoot>
       <Nav />
-      <main id="top">
+      <HomeSectionNav />
+      <main>
         <Hero />
         <Ticker />
         <About />

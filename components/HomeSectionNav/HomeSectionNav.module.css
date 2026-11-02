@@ -1,0 +1,62 @@
+.nav {
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: var(--space-4);
+  display: grid;
+  gap: 0;
+  justify-items: start;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition:
+    opacity 400ms var(--ease-out),
+    visibility 0s linear 400ms;
+}
+
+.nav.visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.link {
+  display: block;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  transition: font-size 300ms var(--ease-out);
+}
+
+.link:focus-visible,
+.link.active {
+  color: var(--text);
+}
+
+.link.active .label {
+  font-size: 1.625rem;
+  line-height: 1;
+}
+
+@media (max-width: 1199px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav {
+    transition: none;
+  }
+
+  .label {
+    transition: none;
+  }
+}

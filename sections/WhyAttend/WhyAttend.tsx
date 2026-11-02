@@ -14,7 +14,7 @@ const icons: Record<string, React.ReactNode> = {
 
 export default function WhyAttend() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="why-attend">
       <Container>
         <SectionHeader tag="Why Attend" title={<>Unleash the Potential of Your <span className="muted">Research</span></>} />
         <div className={styles.grid}>

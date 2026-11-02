@@ -7,7 +7,7 @@ import styles from "./Gallery.module.css";
 
 export default function Gallery() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="gallery">
       <Container>
         <SectionHeader
           tag="Gallery"

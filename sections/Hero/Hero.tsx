@@ -7,7 +7,7 @@ import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <section className={styles.hero} data-hero>
+    <section className={styles.hero} id="top" data-hero>
       <div className={styles.background} data-hero-bg>
         <Image src="/images/hero.webp" alt="" fill priority sizes="100vw" className={styles.backgroundImage} />
       </div>

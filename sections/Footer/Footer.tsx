@@ -64,6 +64,7 @@ export default function Footer() {
       <div className={styles.word} data-footer-word aria-hidden="true">
         <span>IMSC</span>
         <span>IMSC</span>
+        <span>IMSC</span>
       </div>
       <Container className={styles.bottom}>
         <span>© 2027 IMSC. All rights reserved.</span>
