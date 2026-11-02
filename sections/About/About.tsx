@@ -1,3 +1,4 @@
+import Button from "@/components/Button/Button";
 import RevealImage from "@/components/RevealImage/RevealImage";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import styles from "./About.module.css";
@@ -19,6 +20,11 @@ export default function About() {
         <RevealImage src="/img/simulator.jpg" alt="Maritime engineering simulator" speed={0.2} className={styles.imageB} />
         <RevealImage src="/img/posters.jpg" alt="Researchers discussing maritime studies" speed={-0.25} className={styles.imageC} />
         <RevealImage src="/img/split.jpg" alt="View of Split, Croatia" speed={0.15} className={styles.imageD} />
+      </div>
+      <div className={styles.welcomeLink}>
+        <Button href="/welcome" variant="light">
+          Welcome from the Organizing Committee
+        </Button>
       </div>
     </section>
   );

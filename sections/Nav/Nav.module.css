@@ -74,9 +74,15 @@
 }
 
 .panel {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  left: 0;
   display: grid;
+  max-height: calc(100dvh - var(--space-20));
+  overflow-y: auto;
   visibility: hidden;
-  margin-top: var(--space-2);
+  pointer-events: none;
   padding: var(--space-2);
   transform: translateY(calc(var(--space-2) * -1));
   border: var(--border-thin) solid var(--line);
@@ -89,6 +95,7 @@
 
 .open .panel {
   visibility: visible;
+  pointer-events: auto;
   transform: none;
   opacity: 1;
 }

@@ -12,11 +12,15 @@ export default function Gallery() {
         <SectionHeader
           tag="Gallery"
           align="center"
-          title={<>A glimpse from previous <span className="muted">IMSC editions.</span></>}
+          title={
+            <>
+              A glimpse from previous <span className="muted">IMSC editions.</span>
+            </>
+          }
         />
       </Container>
       <div className={styles.trackFrame}>
-        <Marquee className={styles.track} direction={-1} duration={20} galleryTrack>
+        <Marquee className={styles.track} direction={1} duration={20} galleryTrack>
           {[...gallery, ...gallery, ...gallery].map((item, index) => (
             <figure className={`${styles.image} ${styles[item.size]}`} data-gallery-image key={`${item.alt}-${index}`}>
               <Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 80vw, 35vw" />

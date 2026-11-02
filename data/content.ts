@@ -18,15 +18,11 @@ export type ProgrammeDay = {
   entries: ProgrammeEntry[];
 };
 
-export type Ticket = {
+export type RegistrationRate = {
   title: string;
-  description: string;
-  price: string;
   earlyBird: string;
-  action: string;
-  note: string;
-  featured?: boolean;
-  includes: string[];
+  regular: string;
+  supportedDocuments?: string;
 };
 
 export type FaqItem = {
@@ -66,77 +62,156 @@ export const programme: ProgrammeDay[] = [
     date: "Wednesday, 19 May 2027",
     entries: [
       { time: "08:00 – 09:00", title: "Registration & Check-In" },
-      { time: "09:00 – 09:45", title: "Opening Ceremony", description: "Welcome addresses from the Dean of the Faculty of Maritime Studies and the IMSC organising committee.", initials: "AK", tone: "a" },
-      { time: "09:45 – 10:30", title: "Keynote / Decarbonising the Fleet", description: "Pathways to IMO 2050 targets: alternative fuels, energy efficiency and what the next decade really demands.", initials: "ST", tone: "f" },
+      {
+        time: "09:00 – 09:45",
+        title: "Opening Ceremony",
+        description: "Welcome addresses from the Dean of the Faculty of Maritime Studies and the IMSC organising committee.",
+        initials: "AK",
+        tone: "a",
+      },
+      {
+        time: "09:45 – 10:30",
+        title: "Keynote / Decarbonising the Fleet",
+        description: "Pathways to IMO 2050 targets: alternative fuels, energy efficiency and what the next decade really demands.",
+        initials: "ST",
+        tone: "f",
+      },
       { time: "10:30 – 11:00", title: "Coffee Break" },
-      { time: "11:00 – 12:30", title: "Session A / Navigation & Safety at Sea", description: "Paper presentations on e-navigation, collision avoidance and human factors on the bridge.", initials: "JR", tone: "c" },
+      {
+        time: "11:00 – 12:30",
+        title: "Session A / Navigation & Safety at Sea",
+        description: "Paper presentations on e-navigation, collision avoidance and human factors on the bridge.",
+        initials: "JR",
+        tone: "c",
+      },
     ],
   },
   {
     label: "Day 02",
     date: "Thursday, 20 May 2027",
     entries: [
-      { time: "09:00 – 10:00", title: "Keynote / Autonomous Shipping", description: "From remote-controlled to fully autonomous vessels — regulation, technology and trust.", initials: "MB", tone: "b" },
-      { time: "10:15 – 12:00", title: "Session B / Marine Engineering", description: "Propulsion systems, condition monitoring and digital twins for ship machinery.", initials: "AK", tone: "a" },
+      {
+        time: "09:00 – 10:00",
+        title: "Keynote / Autonomous Shipping",
+        description: "From remote-controlled to fully autonomous vessels — regulation, technology and trust.",
+        initials: "MB",
+        tone: "b",
+      },
+      {
+        time: "10:15 – 12:00",
+        title: "Session B / Marine Engineering",
+        description: "Propulsion systems, condition monitoring and digital twins for ship machinery.",
+        initials: "AK",
+        tone: "a",
+      },
       { time: "12:00 – 13:30", title: "Lunch & Networking" },
-      { time: "13:30 – 15:00", title: "Session C / Ports & Logistics", description: "Smart ports, intermodal transport and the Adriatic as a logistics corridor.", initials: "IP", tone: "e" },
+      {
+        time: "13:30 – 15:00",
+        title: "Session C / Ports & Logistics",
+        description: "Smart ports, intermodal transport and the Adriatic as a logistics corridor.",
+        initials: "IP",
+        tone: "e",
+      },
     ],
   },
   {
     label: "Day 03",
     date: "Friday, 21 May 2027",
     entries: [
-      { time: "09:00 – 10:30", title: "Session D / Maritime Law & Education", description: "Regulatory change, STCW training and the future of maritime education and training.", initials: "LM", tone: "d" },
-      { time: "11:00 – 12:00", title: "Closing Remarks & Best Paper Award", description: "Summary of conclusions, best paper and young researcher awards, and the announcement of IMSC 2028.", initials: "AK", tone: "a" },
+      {
+        time: "09:00 – 10:30",
+        title: "Session D / Maritime Law & Education",
+        description: "Regulatory change, STCW training and the future of maritime education and training.",
+        initials: "LM",
+        tone: "d",
+      },
+      {
+        time: "11:00 – 12:00",
+        title: "Closing Remarks & Best Paper Award",
+        description: "Summary of conclusions, best paper and young researcher awards, and the announcement of IMSC 2028.",
+        initials: "AK",
+        tone: "a",
+      },
       { time: "13:00 – 18:00", title: "Technical Visit / Port of Split" },
     ],
   },
 ];
 
-export const tickets: Ticket[] = [
+export const registrationRates: RegistrationRate[] = [
+  { title: "Regular participation", earlyBird: "€300.00", regular: "€350.00" },
+  { title: "General participation (1-day)", earlyBird: "€150.00", regular: "€150.00" },
+  { title: "Online presentation", earlyBird: "€150.00", regular: "€150.00" },
   {
-    title: "Participant",
-    description: "Full participation for authors and attendees.",
-    price: "€350",
-    earlyBird: "Early bird: €300 until 1 March",
-    action: "Register as participant",
-    note: "Early bird closes 1 March 2027",
-    includes: ["Access to all sessions & keynotes", "Book of Proceedings", "Coffee breaks & lunches"],
+    title: "PhD student",
+    earlyBird: "€150.00",
+    regular: "€200.00",
+    supportedDocuments: "A scanned copy or photograph of your current student ID or enrollment letter is required.",
   },
+  { title: "Accompanying person", earlyBird: "€100.00", regular: "€100.00" },
   {
-    title: "⚓ Author + Gala",
-    description: "Everything for presenting authors, plus the gala dinner.",
-    price: "€450",
-    earlyBird: "Early bird: €400 until 1 March",
-    action: "Register as author",
-    note: "Includes one paper presentation",
-    featured: true,
-    includes: ["All Participant benefits", "Gala dinner on 20 May", "Technical visit to Port of Split"],
-  },
-  {
-    title: "Student",
-    description: "Reduced fee for PhD and master's students.",
-    price: "€150",
-    earlyBird: "Early bird: €120 until 1 March",
-    action: "Register as student",
-    note: "Limited to 60 places",
-    includes: ["Access to all sessions & keynotes", "Young researcher session", "Valid student ID required"],
+    title: "BSc and MSc student",
+    earlyBird: "Free",
+    regular: "Free",
+    supportedDocuments: "A scanned copy or photograph of your current student ID or enrollment letter is required.",
   },
 ];
 
 export const faq: FaqItem[] = [
-  { question: "How do I register for IMSC 2027?", answer: "Create an account on the conference portal, choose your registration type and pay online. You'll get a confirmation email with your invoice." },
-  { question: "When is the abstract submission deadline?", answer: "Abstracts are due by 15 January 2027. Notification of acceptance follows by 15 February, with full papers due on 1 April 2027." },
-  { question: "What is included in the registration fee?", answer: "All sessions, the Book of Proceedings, coffee breaks and lunches. The Author + Gala package also includes the gala dinner and technical visit." },
-  { question: "Will I receive a certificate of attendance?", answer: "Yes — certificates are issued digitally and become available in your profile after the conference." },
-  { question: "Where exactly is the conference held?", answer: "At the Faculty of Maritime Studies, Ruđera Boškovića 37, Split, Croatia — a short ride from the city centre and ferry port." },
+  {
+    question: "How do I register for IMSC 2027?",
+    answer: "Registration is mandatory. Follow the instructions on the Registration Procedure page and pay the fee for your participation type by bank transfer. There is no registration app. Your participation is confirmed only after payment.",
+  },
+  {
+    question: "How do I submit an abstract, and what is the deadline?",
+    answer: "Submit an extended abstract in English using the mandatory template. The main text should be 500–800 words, and the complete abstract must not exceed three pages. Email the Word document (.docx) to imsc@pfst.hr with the paper topic in the subject line. The deadline and acceptance notification date will be announced. Abstract submission and conference registration are separate processes; use the same academic email address for both. The registered main author may submit up to two extended abstracts.",
+  },
+  {
+    question: "What does the registration fee include?",
+    answer: "Regular participation and PhD Student registration include all three conference days, one presentation, the digital Book of Abstracts, lunch, coffee breaks, and the official conference dinner. One-day participation includes one conference day of your choice, lunch, a coffee break, and the dinner. An accompanying person fee includes lunch and the dinner. Accommodation is not included.",
+  },
+  {
+    question: "Can I submit a full paper?",
+    answer: "A full paper is optional and is not required to participate. Authors of accepted extended abstracts may submit a full paper for international peer review and possible publication in a special issue of Transactions on Maritime Science (ToMS). The submission instructions and deadline will be announced.",
+  },
+  {
+    question: "Can students participate, and what documents are required?",
+    answer: "BSc, MSc, and PhD students may participate. PhD, BSc, and MSc student rates require a scanned copy or photograph of a current student ID or enrollment letter.",
+  },
+  {
+    question: "When and where will IMSC 2027 take place?",
+    answer: "The conference will be held on 6–7 May 2027 at Hotel Cornaro in Split, Croatia.",
+  },
 ];
 
 export const testimonials: Testimonial[] = [
-  { quote: "“One of the most focused maritime conferences in the region. The sessions were sharp and the discussions continued long after.”", name: "Tomas Holm", role: "Researcher, Chalmers", initials: "TH", tone: "b" },
-  { quote: "“A perfect mix of academia and industry. I left Split with three new research partners and a paper idea.”", name: "Elena Vidal", role: "Naval Architect, Barcelona", initials: "EV", tone: "c" },
-  { quote: "“Well organised, warm hosts and a programme that respects your time. Already planning to submit next year.”", name: "Nikolai Orlov", role: "PhD Candidate, Gdynia", initials: "NO", tone: "e" },
-  { quote: "“The young researcher session gave me feedback I couldn’t get anywhere else. Highly recommended.”", name: "Mia Petrić", role: "Assistant, PFST", initials: "MP", tone: "d" },
+  {
+    quote: "“One of the most focused maritime conferences in the region. The sessions were sharp and the discussions continued long after.”",
+    name: "Tomas Holm",
+    role: "Researcher, Chalmers",
+    initials: "TH",
+    tone: "b",
+  },
+  {
+    quote: "“A perfect mix of academia and industry. I left Split with three new research partners and a paper idea.”",
+    name: "Elena Vidal",
+    role: "Naval Architect, Barcelona",
+    initials: "EV",
+    tone: "c",
+  },
+  {
+    quote: "“Well organised, warm hosts and a programme that respects your time. Already planning to submit next year.”",
+    name: "Nikolai Orlov",
+    role: "PhD Candidate, Gdynia",
+    initials: "NO",
+    tone: "e",
+  },
+  {
+    quote: "“The young researcher session gave me feedback I couldn’t get anywhere else. Highly recommended.”",
+    name: "Mia Petrić",
+    role: "Assistant, PFST",
+    initials: "MP",
+    tone: "d",
+  },
 ];
 
 export const sponsors = [
@@ -173,9 +248,17 @@ export const features = [
   { title: "Networking & Excursion", text: "Welcome reception, gala dinner and a technical visit to the Port of Split.", icon: "people" },
 ];
 
-export const tickerItems = [
-  "Live in Split, Croatia",
-  "Early registration now open",
-  "Abstract submission until 15 Jan 2027",
-  "12th edition",
+export const tickerItems = ["Live in Split, Croatia", "Early registration now open", "Abstract submission until 1 Feb 2027", "12th edition"];
+
+export const mainTopic = "Shaping the Future of Maritime: Innovation, Sustainability, and Resilience";
+
+export const topics = [
+  "Marine Engineering and Ship Energy Systems",
+  "Navigation and Maritime Safety",
+  "Marine Environment, Environmental Protection and Sustainability",
+  "Marine Electrical Engineering, Electronics and Informatics",
+  "Maritime Law",
+  "Maritime Economics and Management",
+  "Maritime Transport and Logistics",
+  "Interdisciplinary and Social Sciences in Maritime Studies",
 ];

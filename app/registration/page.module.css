@@ -1,0 +1,142 @@
+.main {
+  padding: calc(var(--section-padding) + var(--space-20)) 0 var(--section-padding);
+}
+
+.header {
+  max-width: var(--space-180);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-4);
+  color: var(--accent-hover);
+  font-size: var(--type-small);
+  letter-spacing: var(--tracking-body);
+  text-transform: uppercase;
+}
+
+.header h1 {
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-heading);
+  line-height: var(--leading-tight);
+}
+
+.intro {
+  max-width: var(--space-120);
+  margin: var(--space-6) auto var(--space-8);
+  color: var(--muted);
+  font-size: var(--type-body-large);
+}
+
+.content {
+  display: grid;
+  max-width: var(--space-180);
+  gap: var(--space-15);
+  margin: var(--space-20) auto 0;
+}
+
+.section h2 {
+  margin-bottom: var(--space-4);
+  font-size: var(--type-h2-small);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-heading);
+}
+
+.section > p {
+  max-width: var(--space-150);
+  margin-top: var(--space-4);
+  color: var(--soft);
+}
+
+.sectionIntro {
+  margin-bottom: var(--space-5);
+}
+
+.notice {
+  padding-left: var(--space-4);
+  border-left: var(--size-two-pixel) solid var(--accent);
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.card {
+  padding: var(--space-6);
+  border: var(--border-thin) solid var(--line);
+  border-radius: var(--radius-large);
+  background: var(--surface);
+}
+
+.card h3 {
+  margin-bottom: var(--space-4);
+  font-size: var(--type-h3);
+  font-weight: var(--weight-medium);
+}
+
+.card ul {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card li {
+  position: relative;
+  padding-left: var(--space-5);
+  color: var(--muted);
+}
+
+.card li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--accent-hover);
+  content: "";
+}
+
+.bankDetails {
+  margin-top: var(--space-6);
+  border-top: var(--border-thin) solid var(--line);
+}
+
+.bankRow {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) 1.3fr;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-2);
+  border-bottom: var(--border-thin) solid var(--line);
+}
+
+.bankRow dt {
+  color: var(--muted);
+}
+
+.bankRow dd {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .main {
+    padding-top: calc(var(--section-padding) + var(--space-15));
+  }
+
+  .content {
+    gap: var(--space-12);
+    margin-top: var(--space-15);
+  }
+
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bankRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

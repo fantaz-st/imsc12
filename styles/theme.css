@@ -10,7 +10,7 @@
   --accent-hover: #8c74ff;
   --white: #ffffff;
   --black: #0a0a0a;
-  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  --font-sans: var(--font-pf-bulletin-sans-pro), system-ui, sans-serif;
   --type-display: clamp(4.5rem, 10vw, 9.5rem);
   --type-h1: clamp(4rem, 9vw, 8rem);
   --type-h2: clamp(2.5rem, 5vw, 4rem);

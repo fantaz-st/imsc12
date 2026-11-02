@@ -21,6 +21,13 @@
   position: absolute;
 }
 
+.welcomeLink {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-4);
+  padding: 0 var(--container-gutter);
+}
+
 .imageMain {
   top: 0;
   left: 50%;

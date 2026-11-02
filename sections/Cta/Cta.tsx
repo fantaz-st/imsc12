@@ -12,7 +12,7 @@ type Countdown = {
   seconds: string;
 };
 
-const target = new Date("2027-05-19T09:00:00+02:00").getTime();
+const target = new Date("2027-05-06T09:00:00+02:00").getTime();
 
 function getCountdown(): Countdown {
   let secondsLeft = Math.max(0, Math.floor((target - Date.now()) / 1000));
@@ -135,7 +135,7 @@ export default function Cta() {
       <div className={styles.inner}>
         <div className={styles.left}>
           <SplitText as="h2">Get ready <span className="muted">for IMSC</span></SplitText>
-          <p data-fade>19 May 2027 — Live in Split, Croatia</p>
+          <p data-fade>6–7 May 2027 — Hotel Cornaro, Split, Croatia</p>
           <Button href="#tickets">Register now</Button>
         </div>
         <div className={styles.countdown} data-fade aria-label="Countdown to IMSC 2027">
