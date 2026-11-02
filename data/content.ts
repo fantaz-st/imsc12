@@ -179,7 +179,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: "When and where will IMSC 2027 take place?",
-    answer: "The conference will be held on 6–7 May 2027 at Hotel Cornaro in Split, Croatia.",
+    answer: "The conference will be held on 19–21 May 2027 at Hotel Cornaro in Split, Croatia.",
   },
 ];
 

@@ -19,8 +19,41 @@ import Gallery from "@/sections/Gallery/Gallery";
 import Footer from "@/sections/Footer/Footer";
 
 export default function Home() {
+  const eventStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "12th International Maritime Science Conference (IMSC 2027)",
+    description:
+      "The 12th International Maritime Science Conference brings together researchers, engineers, educators, and maritime industry professionals.",
+    startDate: "2027-05-19",
+    endDate: "2027-05-21",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    location: {
+      "@type": "Place",
+      name: "Hotel Cornaro",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Split",
+        addressCountry: "HR",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Faculty of Maritime Studies, University of Split",
+      url: "https://www.pfst.unist.hr/",
+    },
+    url: "https://imsc.pfst.hr/",
+  };
+
   return (
     <AnimationRoot>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <Nav />
       <HomeSectionNav />
       <main>

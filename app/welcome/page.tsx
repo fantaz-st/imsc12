@@ -5,9 +5,18 @@ import Nav from "@/sections/Nav/Nav";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Welcome from the Organizing Committee — IMSC 2027",
+  title: "Welcome from the Organizing Committee",
   description:
     "A welcome to the 12th International Maritime Science Conference in Split, Croatia.",
+  alternates: {
+    canonical: "/welcome",
+  },
+  openGraph: {
+    title: "Welcome from the Organizing Committee",
+    description:
+      "Read the welcome from the organizing committee of the 12th International Maritime Science Conference in Split, Croatia.",
+    url: "/welcome",
+  },
 };
 
 export default function WelcomePage() {

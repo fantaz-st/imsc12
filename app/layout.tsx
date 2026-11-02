@@ -21,9 +21,38 @@ const bulletinSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "IMSC 2027 — International Maritime Science Conference",
+  metadataBase: new URL("https://imsc.pfst.hr"),
+  title: {
+    default: "IMSC 2027 | International Maritime Science Conference in Split",
+    template: "%s | IMSC 2027",
+  },
   description:
-    "Join the 12th International Maritime Science Conference at Hotel Cornaro in Split, Croatia, 6–7 May 2027.",
+    "Join the 12th International Maritime Science Conference at Hotel Cornaro in Split, Croatia, 19–21 May 2027. Explore maritime research, the programme, and registration.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "IMSC 2027",
+    title: "IMSC 2027 | International Maritime Science Conference in Split",
+    description:
+      "The 12th International Maritime Science Conference takes place at Hotel Cornaro in Split, Croatia, 19–21 May 2027.",
+    url: "/",
+    images: [
+      {
+        url: "/images/hero.webp",
+        alt: "International Maritime Science Conference 2027 in Split, Croatia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMSC 2027 | International Maritime Science Conference in Split",
+    description:
+      "Join maritime researchers and industry leaders in Split, Croatia, 19–21 May 2027.",
+    images: ["/images/hero.webp"],
+  },
   icons: {
     icon: "/favicon/favicon.svg",
     apple: "/favicon/apple-touch-icon.png",

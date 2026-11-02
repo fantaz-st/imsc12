@@ -5,9 +5,18 @@ import Nav from "@/sections/Nav/Nav";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Instructions for Authors — IMSC 2027",
+  title: "Instructions for Authors",
   description:
-    "Submission, presentation, and publication instructions for authors at IMSC 2027.",
+    "Find IMSC 2027 extended abstract submission requirements, presentation guidance, deadlines, and publication opportunities.",
+  alternates: {
+    canonical: "/authors",
+  },
+  openGraph: {
+    title: "Instructions for Authors",
+    description:
+      "Extended abstract submission requirements, presentation guidance, and publication opportunities for IMSC 2027.",
+    url: "/authors",
+  },
 };
 
 export default function AuthorsPage() {

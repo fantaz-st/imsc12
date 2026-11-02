@@ -7,9 +7,18 @@ import Nav from "@/sections/Nav/Nav";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Conference Registration — IMSC 2027",
+  title: "Conference Registration",
   description:
-    "Registration procedure, participation fees, and payment details for IMSC 2027 in Split.",
+    "View IMSC 2027 registration fees, participation options, payment instructions, and what is included in your conference registration.",
+  alternates: {
+    canonical: "/registration",
+  },
+  openGraph: {
+    title: "Conference Registration",
+    description:
+      "Registration fees, participation options, and payment instructions for the 12th International Maritime Science Conference in Split.",
+    url: "/registration",
+  },
 };
 
 const bankDetails = [

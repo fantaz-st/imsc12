@@ -22,7 +22,7 @@ export default function Hero() {
                   <path d="M3 10h18M8 3v4M16 3v4" />
                 </svg>
               </span>
-              <span>6–7 May 2027</span>
+              <span>19–21 May 2027</span>
             </div>
             <div className={styles.metaRow} data-hero-fade>
               <span className={styles.metaIcon} aria-hidden="true">
