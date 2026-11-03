@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | IMSC 2027",
   },
   description:
-    "Join the 12th International Maritime Science Conference at Hotel Cornaro in Split, Croatia, 19–21 May 2027. Explore maritime research, the programme, and registration.",
+    "Join the 12th International Maritime Science Conference at Hotel Cornaro in Split, Croatia, 6–7 May 2027. Explore maritime research, the programme, and registration.",
   alternates: {
     canonical: "/",
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "IMSC 2027",
     title: "IMSC 2027 | International Maritime Science Conference in Split",
     description:
-      "The 12th International Maritime Science Conference takes place at Hotel Cornaro in Split, Croatia, 19–21 May 2027.",
+      "The 12th International Maritime Science Conference takes place at Hotel Cornaro in Split, Croatia, 6–7 May 2027.",
     url: "/",
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IMSC 2027 | International Maritime Science Conference in Split",
     description:
-      "Join maritime researchers and industry leaders in Split, Croatia, 19–21 May 2027.",
+      "Join maritime researchers and industry leaders in Split, Croatia, 6–7 May 2027.",
     images: ["/images/hero.webp"],
   },
   icons: {

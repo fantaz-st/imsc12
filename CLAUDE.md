@@ -1,6 +1,6 @@
 # IMSC 2027 — Next.js landing page
 
-Static, responsive one-page site for the 12th International Maritime Science Conference in Split, 19–21 May 2027.
+Static, responsive one-page site for the 12th International Maritime Science Conference in Split, 6–7 May 2027.
 
 ## Stack
 
@@ -25,7 +25,7 @@ Nav, Hero, Ticker, About, Why Attend, Speakers, Programme, Testimonials, Registr
 
 ## Animations
 
-Animations are initialized in the client-side `components/AnimationRoot.tsx` and scoped with `useGSAP`. The page supports hero intro and parallax, word reveals, image clip reveals, batched card/row reveals, velocity-reactive marquees, FAQ transitions, CTA background scale, and a countdown to `2027-05-19T09:00:00+02:00`. Reduced-motion preferences disable GSAP motion, and content remains visible without JavaScript.
+Animations are initialized in the client-side `components/AnimationRoot.tsx` and scoped with `useGSAP`. The page supports hero intro and parallax, word reveals, image clip reveals, batched card/row reveals, velocity-reactive marquees, FAQ transitions, CTA background scale, and a countdown to `2027-05-06T09:00:00+02:00`. Reduced-motion preferences disable GSAP motion, and content remains visible without JavaScript.
 
 ## Development
 

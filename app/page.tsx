@@ -23,10 +23,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Event",
     name: "12th International Maritime Science Conference (IMSC 2027)",
-    description:
-      "The 12th International Maritime Science Conference brings together researchers, engineers, educators, and maritime industry professionals.",
-    startDate: "2027-05-19",
-    endDate: "2027-05-21",
+    description: "The 12th International Maritime Science Conference brings together researchers, engineers, educators, and maritime industry professionals.",
+    startDate: "2027-05-06",
+    endDate: "2027-05-07",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
     location: {
@@ -61,7 +60,7 @@ export default function Home() {
         <Ticker />
         <About />
         <Topics />
-        <WhyAttend />
+        {/* <WhyAttend /> */}
         {/* <Programme /> */}
         {/* <KeynoteSpeakers /> */}
         {/* <CommercialTechnicalPresentations /> */}

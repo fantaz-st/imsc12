@@ -59,7 +59,7 @@ export const commercialTechnicalPresentations: Speaker[] = [
 export const programme: ProgrammeDay[] = [
   {
     label: "Day 01",
-    date: "Wednesday, 19 May 2027",
+    date: "Thursday, 6 May 2027",
     entries: [
       { time: "08:00 – 09:00", title: "Registration & Check-In" },
       {
@@ -88,7 +88,7 @@ export const programme: ProgrammeDay[] = [
   },
   {
     label: "Day 02",
-    date: "Thursday, 20 May 2027",
+    date: "Friday, 7 May 2027",
     entries: [
       {
         time: "09:00 – 10:00",
@@ -112,27 +112,6 @@ export const programme: ProgrammeDay[] = [
         initials: "IP",
         tone: "e",
       },
-    ],
-  },
-  {
-    label: "Day 03",
-    date: "Friday, 21 May 2027",
-    entries: [
-      {
-        time: "09:00 – 10:30",
-        title: "Session D / Maritime Law & Education",
-        description: "Regulatory change, STCW training and the future of maritime education and training.",
-        initials: "LM",
-        tone: "d",
-      },
-      {
-        time: "11:00 – 12:00",
-        title: "Closing Remarks & Best Paper Award",
-        description: "Summary of conclusions, best paper and young researcher awards, and the announcement of IMSC 2028.",
-        initials: "AK",
-        tone: "a",
-      },
-      { time: "13:00 – 18:00", title: "Technical Visit / Port of Split" },
     ],
   },
 ];
@@ -167,7 +146,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: "What does the registration fee include?",
-    answer: "Regular participation and PhD Student registration include all three conference days, one presentation, the digital Book of Abstracts, lunch, coffee breaks, and the official conference dinner. One-day participation includes one conference day of your choice, lunch, a coffee break, and the dinner. An accompanying person fee includes lunch and the dinner. Accommodation is not included.",
+    answer: "Regular participation and PhD Student registration include both conference days, one presentation, the digital Book of Abstracts, lunch, coffee breaks, and the official conference dinner. One-day participation includes one conference day of your choice, lunch, a coffee break, and the dinner. An accompanying person fee includes lunch and the dinner. Accommodation is not included.",
   },
   {
     question: "Can I submit a full paper?",
@@ -179,7 +158,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: "When and where will IMSC 2027 take place?",
-    answer: "The conference will be held on 19–21 May 2027 at Hotel Cornaro in Split, Croatia.",
+    answer: "The conference will be held on 6–7 May 2027 at Hotel Cornaro in Split, Croatia.",
   },
 ];
 

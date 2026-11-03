@@ -11,7 +11,7 @@ export default function About() {
           tag="About"
           align="about"
           title={<>Where Maritime Science <span className="muted">Meets Practice</span></>}
-          lead="IMSC brings together scientists, engineers, educators and shipping professionals for three days of research, debate and collaboration on the future of the sea, ships and ports."
+          lead="IMSC brings together scientists, engineers, educators and shipping professionals for two days of research, debate and collaboration on the future of the sea, ships and ports."
         />
       </div>
       <div className={styles.images} data-about-images>

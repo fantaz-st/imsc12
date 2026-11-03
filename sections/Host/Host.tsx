@@ -21,7 +21,7 @@ export default function Host() {
             The Faculty of Maritime Studies in Split has trained seafarers and maritime experts for over seven decades.
           </SplitText>
           <SplitText as="p" className={styles.small}>
-            As host of the 12th edition, the faculty welcomes the IMSC community to Split - a port city where research, education and the shipping industry meet every day. The conference will be held at Hotel Cornaro on 19–21 May 2027.
+            As host of the 12th edition, the faculty welcomes the IMSC community to Split - a port city where research, education and the shipping industry meet every day. The conference will be held at Hotel Cornaro on 6–7 May 2027.
           </SplitText>
           <div className={styles.sign} data-fade>
             <strong>Organising Committee</strong>

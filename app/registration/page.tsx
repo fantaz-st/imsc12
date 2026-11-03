@@ -83,7 +83,7 @@ export default function RegistrationPage() {
                 <article className={styles.card}>
                   <h3>Regular participation and PhD Student</h3>
                   <ul>
-                    <li>Participation in all three conference days</li>
+                    <li>Participation in both conference days</li>
                     <li>One presentation at the conference</li>
                     <li>Digital Book of Abstracts</li>
                     <li>Lunch and coffee breaks</li>
