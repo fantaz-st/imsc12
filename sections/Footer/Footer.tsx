@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
       </Container>
       <div className={styles.word} data-footer-word aria-hidden="true">
-        <span>IMSC</span>
+        <span>CIMSCIMS</span>
         <span>IMSC</span>
         <span>IMSC</span>
       </div>

@@ -8,7 +8,7 @@ const sections = [
   { href: "#top", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#topics", label: "Topics" },
-  { href: "#why-attend", label: "Why attend" },
+  // { href: "#why-attend", label: "Why attend" },
   { href: "#venue", label: "Venue" },
   { href: "#tickets", label: "Registration" },
   { href: "#faq", label: "FAQ" },
@@ -20,9 +20,7 @@ export default function HomeSectionNav() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const sectionElements = sections
-      .map(({ href }) => document.getElementById(href.slice(1)))
-      .filter((element): element is HTMLElement => element !== null);
+    const sectionElements = sections.map(({ href }) => document.getElementById(href.slice(1))).filter((element): element is HTMLElement => element !== null);
     const hero = document.querySelector<HTMLElement>("[data-hero]");
     const footer = document.querySelector<HTMLElement>("footer");
 
@@ -37,10 +35,7 @@ export default function HomeSectionNav() {
       const visibleSections = sectionElements
         .map((element) => {
           const bounds = element.getBoundingClientRect();
-          const visibleHeight = Math.max(
-            0,
-            Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0),
-          );
+          const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0));
           const center = (bounds.top + bounds.bottom) / 2;
 
           return {
@@ -74,22 +69,12 @@ export default function HomeSectionNav() {
   }, []);
 
   return (
-    <nav
-      className={`${styles.nav} ${isVisible ? styles.visible : ""}`}
-      aria-label="Homepage sections"
-      aria-hidden={!isVisible}
-      inert={!isVisible}
-    >
+    <nav className={`${styles.nav} ${isVisible ? styles.visible : ""}`} aria-label="Homepage sections" aria-hidden={!isVisible} inert={!isVisible}>
       {sections.map(({ href, label }) => {
         const isActive = activeSection === href.slice(1);
 
         return (
-          <Link
-            className={`${styles.link} ${isActive ? styles.active : ""}`}
-            href={href}
-            key={href}
-            aria-current={isActive ? "location" : undefined}
-          >
+          <Link className={`${styles.link} ${isActive ? styles.active : ""}`} href={href} key={href} aria-current={isActive ? "location" : undefined}>
             <span className={styles.label}>{label}</span>
           </Link>
         );

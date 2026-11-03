@@ -45,6 +45,14 @@ export type GalleryItem = {
   size: string;
 };
 
+export type GalleryWallItem = {
+  image: string;
+  alt: string;
+  width: number;
+  height: number;
+  portrait?: boolean;
+};
+
 export const keynoteSpeakers: Speaker[] = [
   { name: "Lukša Čičovački", role: "Head of Unit for Maritime Digital Solutions, EMSA", image: "/images/speakers/luksa-cicovacki.png" },
   { name: "Dong-Wook Song", role: "World Maritime University", image: "/images/speakers/dong-wook-song.png" },
@@ -216,6 +224,25 @@ export const gallery: GalleryItem[] = [
   { image: "/img/posters.jpg", alt: "Researchers discussing conference posters", size: "three" },
   { image: "/img/simulator.jpg", alt: "Maritime simulator visit", size: "four" },
   { image: "/img/split.jpg", alt: "View of Split, Croatia", size: "five" },
+];
+
+export const galleryWall: GalleryWallItem[] = [
+  { image: "/images/gallery/3ITMd8WXjDQBAGmt_IAMUAGA26-052-MAA-071026.webp", alt: "Conference guests seated during a session", width: 1920, height: 1277, portrait: true },
+  { image: "/images/gallery/507HRChCHwYCSYPX_IAMUAGA26-165-MAA-071026.webp", alt: "Conference visitors exploring a maritime museum exhibit", width: 1920, height: 1277 },
+  { image: "/images/gallery/5DneBqX8PMhr_f6I_IAMUAGA26-105-MAA-071026.webp", alt: "Audience attending a presentation in a stone hall", width: 1920, height: 1277, portrait: true },
+  { image: "/images/gallery/EJino76yN2nr-UR2_IAMUAGA26-041-MAA-061026.webp", alt: "Dessert buffet at the conference", width: 1920, height: 1278 },
+  { image: "/images/gallery/F_hqzHCnMcEUdo6C_IAMUAGA26-030-MA-081026.webp", alt: "Conference guests networking during an evening reception", width: 1920, height: 1282, portrait: true },
+  { image: "/images/gallery/HGqmIw9gOLjLQFTM_IAMUAGA26-011-MAA-061026.webp", alt: "Conference participants discussing a technical display", width: 1920, height: 1278, portrait: true },
+  { image: "/images/gallery/ND_Xz_19MQhyB_3E_IAMUAGA26-157-MAA-071026.webp", alt: "Conference visitors touring a historic exhibit", width: 1920, height: 1277 },
+  { image: "/images/gallery/Tk4tK8RAIz4XIvQd_IAMUAGA26-021-MAA-071026.webp", alt: "Conference attendees speaking with an exhibitor", width: 1330, height: 2000, portrait: true },
+  { image: "/images/gallery/aKKBfNjTK7coAxkG_IAMUAGA26-145-MAA-071026.webp", alt: "Conference participants seated for a meal", width: 1920, height: 1277 },
+  { image: "/images/gallery/egr5QymeAGkBxiw__IAMUAGA26-002-MA-081026.webp", alt: "Dining hall prepared for the conference reception", width: 1920, height: 1277 },
+  { image: "/images/gallery/lcVJk-JQK3PQHDXD_IAMUAGA26-181-MAA-071026.webp", alt: "Conference audience listening to a presentation", width: 1920, height: 1277, portrait: true },
+  { image: "/images/gallery/mdZ7_vE0jMNpD7YN_IAMUAGA26-048-MAA-061026.webp", alt: "Drinks prepared for the conference reception", width: 1920, height: 1278, portrait: true },
+  { image: "/images/gallery/rBXYXGcFIiHTSy1V_IAMUAGA26-016-MAA-061026.webp", alt: "Conference organizer handing a gift bag to an attendee", width: 1920, height: 1278, portrait: true },
+  { image: "/images/gallery/sJEBCBFFgur8HCEY_IAMUAGA26-097-MAA-071026.webp", alt: "Food buffet served at the conference", width: 1920, height: 1277 },
+  { image: "/images/gallery/xJvvzuZTMxdscw-9_IAMUAGA26-070-MAA-071026.webp", alt: "Attendees listening during a conference session", width: 1920, height: 1277, portrait: true },
+  { image: "/images/gallery/yq1BfuGdCysLT051_IAMUAGA26-125-MAA-071026.webp", alt: "Conference guests networking on an outdoor terrace", width: 1920, height: 1277 },
 ];
 
 export const features = [

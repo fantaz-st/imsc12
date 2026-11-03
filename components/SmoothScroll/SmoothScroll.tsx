@@ -13,7 +13,7 @@ export default function SmoothScroll({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    const lenis = new Lenis({ anchors: true });
+    const lenis = new Lenis({ anchors: true, lerp: 0.1 });
     const updateScrollTrigger = () => ScrollTrigger.update();
     const updateLenis = (time: number) => lenis.raf(time * 1000);
 

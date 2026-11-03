@@ -5,7 +5,7 @@ import Hero from "@/sections/Hero/Hero";
 import Ticker from "@/sections/Ticker/Ticker";
 import About from "@/sections/About/About";
 import Topics from "@/sections/Topics/Topics";
-import WhyAttend from "@/sections/WhyAttend/WhyAttend";
+// import WhyAttend from "@/sections/WhyAttend/WhyAttend";
 // import { CommercialTechnicalPresentations, KeynoteSpeakers } from "@/sections/Speakers/Speakers";
 // import Programme from "@/sections/Programme/Programme";
 // import Testimonials from "@/sections/Testimonials/Testimonials";
@@ -15,7 +15,7 @@ import Host from "@/sections/Host/Host";
 // import Committee from "@/sections/Committee/Committee";
 import Faq from "@/sections/Faq/Faq";
 import Cta from "@/sections/Cta/Cta";
-import Gallery from "@/sections/Gallery/Gallery";
+import GalleryWall from "@/sections/GalleryWall/GalleryWall";
 import Footer from "@/sections/Footer/Footer";
 
 export default function Home() {
@@ -71,7 +71,7 @@ export default function Home() {
         {/* <Partners /> */}
         <Faq />
         <Cta />
-        <Gallery />
+        <GalleryWall />
       </main>
       <Footer />
     </AnimationRoot>
