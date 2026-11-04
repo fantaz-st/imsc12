@@ -150,7 +150,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: "How do I submit an abstract, and what is the deadline?",
-    answer: "Submit an extended abstract in English using the mandatory template. The main text should be 500–800 words, and the complete abstract must not exceed three pages. Email the Word document (.docx) to imsc@pfst.hr with the paper topic in the subject line. The deadline and acceptance notification date will be announced. Abstract submission and conference registration are separate processes; use the same academic email address for both. The registered main author may submit up to two extended abstracts.",
+    answer: "Submit an extended abstract in English using the mandatory template. The main text should be 500–800 words, and the complete abstract must not exceed three pages. Email the Word document (.docx) to imsc@pfst.hr with the paper topic in the subject line by 1 February 2027. Authors will be notified of acceptance by 10 March 2027. Abstract submission and conference registration are separate processes; use the same email address for both. The registered main author may submit up to two extended abstracts.",
   },
   {
     question: "What does the registration fee include?",
@@ -158,7 +158,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: "Can I submit a full paper?",
-    answer: "A full paper is optional and is not required to participate. Authors of accepted extended abstracts may submit a full paper for international peer review and possible publication in a special issue of Transactions on Maritime Science (ToMS). The submission instructions and deadline will be announced.",
+    answer: "A full paper is optional and is not required to participate. Submit it directly through the Transactions on Maritime Science (ToMS) journal website by 1 March 2027. Full papers undergo international peer review for possible publication in a special issue. You may submit before your extended abstract decision, but your abstract must be accepted for IMSC 2027 for the full paper to be eligible for the special issue.",
   },
   {
     question: "Can students participate, and what documents are required?",
